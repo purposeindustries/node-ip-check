@@ -1,5 +1,5 @@
 {
-  "name": "ip-check",
+  "name": "check-ip-subnet",
   "version": "0.0.1",
   "description": "Check if IP belongs to the given subnet",
   "main": "index.js",
@@ -7,9 +7,9 @@
     "test": "mocha -R spec -r should test/*.js",
     "test-bg": "mocha -R spec -r should -w test/*.js",
     "test-cov": "npm run-script lib-cov && COVERAGE=1 mocha -R html-cov -r should test/*.js > coverage.html",
-    "lib-cov": "npm run-script clean; jscoverage lib lib-cov",
-    "clean": "rm -rf lib-cov; rm coverage.html",
-    "coveralls": "npm run-script lib-cov && COVERAGE=1 mocha -R mocha-lcov-reporter -r should test/*.js | coveralls.js"
+    "lib-cov": "npm run-script clean; eval `which jscoverage || echo ./node-jscoverage/jscoverage` lib lib-cov",
+    "clean": "rm -rf lib-cov; rm coverage.html; exit 0",
+    "coveralls": "npm run-script lib-cov && COVERAGE=1 mocha -R mocha-lcov-reporter -r should test/*.js | coveralls"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,6 @@
     "should": "^3.1.3",
     "mocha": "^1.18.1",
     "coveralls": "^2.10.0",
-    "mocha-lcov-reporter": "0.0.1"
+    "mocha-lcov-reporter": "https://github.com/madbence/mocha-lcov-reporter/tarball/master"
   }
 }
