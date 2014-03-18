@@ -23,10 +23,12 @@
     "cidr"
   ],
   "author": "Purpose Industries <dev@purposeindustries.co>",
-  "contributors": [{
-    "name": "Bence Dányi",
-    "email": "bd@purposeindustries.co"
-  }],
+  "contributors": [
+    {
+      "name": "Bence Dányi",
+      "email": "bd@purposeindustries.co"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/purposeindustries/node-check-ip/issues"
