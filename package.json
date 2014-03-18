@@ -8,7 +8,8 @@
     "test-bg": "mocha -R spec -r should -w test/*.js",
     "test-cov": "npm run-script lib-cov && COVERAGE=1 mocha -R html-cov -r should test/*.js > coverage.html",
     "lib-cov": "npm run-script clean; jscoverage lib lib-cov",
-    "clean": "rm -rf lib-cov; rm coverage.html"
+    "clean": "rm -rf lib-cov; rm coverage.html",
+    "coveralls": "npm run-script lib-cov && COVERAGE=1 mocha -R mocha-lcov-reporter -r should test/*.js | coveralls.js"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,8 @@
   "homepage": "https://github.com/purposeindustries/node-check-ip",
   "devDependencies": {
     "should": "^3.1.3",
-    "mocha": "^1.18.1"
+    "mocha": "^1.18.1",
+    "coveralls": "^2.10.0",
+    "mocha-lcov-reporter": "0.0.1"
   }
 }
