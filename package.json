@@ -1,6 +1,6 @@
 {
   "name": "check-ip-subnet",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Check if IP belongs to the given subnet",
   "main": "index.js",
   "scripts": {
